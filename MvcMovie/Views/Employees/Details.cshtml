@@ -1,0 +1,40 @@
+﻿@model MvcMovie.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">JoiningDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JoiningDate)
+    </div>
+
+    <div class="display-label">Designation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Designation)
+    </div>
+
+    <div class="display-label">Department</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Department)
+    </div>
+
+    <div class="display-label">Project</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
